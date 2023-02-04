@@ -1,0 +1,21 @@
+import sys
+num1 = int(input('Enter First No.::'))
+num2 = int(input('Enter Second No.::'))
+
+print("MENU")
+print("1.ADD\n2.SUB\n3.MUL\n4.EXIT")
+choice = int(input('Enter Choice ::'))
+
+if choice==1:
+    print(F"{num1} + {num2} = {num1+num2}")
+elif choice==2:
+    print(F"{num1} - {num2} = {num1-num2}")
+elif choice==3:
+    print(F"{num1} * {num2} = {num1*num2}")
+elif choice==4:
+    print("You choose to EXit from the application.")
+    sys.exit(0)
+else:
+    print("Enter proper choice....")
+
+

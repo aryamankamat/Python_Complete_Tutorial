@@ -1,0 +1,38 @@
+#Implementing "Array of objects" concept using LIST data structure in Python 
+
+class Student(object):
+    def __init__(self):
+        self.__roll = int(input('Enter Roll no.::'))
+        self.__name = input('Enter Name ::')
+        self.__m1 = int(input('Enter Marks1::'))
+        self.__m2 = int(input('Enter Marks2::'))
+        self.__m3 = int(input('Enter Marks3.::'))
+        self.__per = None
+    
+    def calResult(self):
+        self.__per = (self.__m1+self.__m2+self.__m3)/3
+        return
+        
+    def PrintRecords(self):
+        print(self.__roll, self.__name, self.__per)
+        return
+
+def main():
+    stud_rec = []
+    N = int(input('How many records ?::')) #3
+    for i in range(N):
+        print(f"Enter Record of student {i+1} :")
+        s = Student()
+        s.calResult()
+        stud_rec.append(s)
+
+
+    print("SUMMARY::")
+    print("Roll Name Score")
+    print("===============")
+    for rec in stud_rec :
+        rec.PrintRecords()
+        
+    
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,25 @@
+import sys
+num1 = int(input('Enter First No.::'))
+num2 = int(input('Enter Second No.::'))
+
+while True:
+    print("Arithmetic Operations")
+    print("1.ADD\n2.SUB\n3.MUL\n4.EXIT")
+    choice = int(input('Enter Your Choice ::'))
+    if choice==1:
+        print(f'{num1} + {num2} = {num1+num2}')
+    elif choice==2:
+        print(f'{num1} - {num2} = {num1-num2}')
+    elif choice==3:
+        print(f'{num1} * {num2} = {num1*num2}')
+    elif choice==4:
+        print("You are about to exit from the application")
+        sys.exit(0)
+    else:
+        print("Enter Proper Choice....")
+    
+    wish = input('Wanna continue?(Yes/No) ::')
+    if wish.lower()=='no':
+        break
+
+print("Thank you. Program Ends here. Visit Again!")
